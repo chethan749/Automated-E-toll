@@ -1,0 +1,29 @@
+.navbar.navbar-dark
+{
+  text-align: center;
+  color: #f1f1f1;
+}
+h1
+{
+  margin: auto;
+}
+.container
+{
+  margin: auto;
+}
+form
+{
+  padding: 5%;
+}
+#detail-box
+{
+  margin: 5%;
+}
+.container.row .col-md-4
+{
+  text-align: center;
+}
+#view
+{
+  margin: 5%;
+}

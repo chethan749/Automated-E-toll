@@ -1,0 +1,18 @@
+<form class="container" ng-submit = 'get_transactions()' method="post">
+  <div class="row">
+    <div class="col">
+      <label for="start_date">Start Date:</label>
+      <input type="date" class="form-control" name = 'start_date' ng-model = 'start_date'>
+    </div>
+    <div class="col">
+      <label for="end_date">End Date:</label>
+      <input type="date" class="form-control" name = 'end_date' ng-model = 'end_date'>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 offset-md-8">
+      <button type="submit" class="btn btn-primary float-right" style="width: 50%">Submit</button>
+    </div>
+  </div>
+</form>
