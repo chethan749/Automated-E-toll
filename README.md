@@ -6,7 +6,7 @@ create table costs(start varchar(50), end varchar(50), cost float, primary key(s
 
 Post to /update with data being a json object of format:
 {
-	"reg": "<register number of vehicle_",
+	"reg": "<register number of vehicle>",
 	"location": "<location>"
 }
 
