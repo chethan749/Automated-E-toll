@@ -38,8 +38,8 @@ app.post("/dashboard", function(req, res){
 });
 
 app.post('/transactions', function(req, res){
-  console.log(req.body.start, req.body.end);
-  connection.query("select * from transactions"/* WHERE start = ? and end = ?", [req.body.start, req.body.end]*/, function(err, data){
+  //console.log(req.body.start, req.body.end);
+  connection.query("select u.fname, u.lname, t.start, t.end from transactions t, user u where u.dlno = t.dlno", function(err, data){
     if(err)
     {
       console.log("Error while querying database :- " + err);

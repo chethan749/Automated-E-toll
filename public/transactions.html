@@ -16,3 +16,21 @@
     </div>
   </div>
 </form>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Starting Point</th>
+      <th scope="col">End Point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat = 'x in details'>
+      <th scope="row">{{$index + 1}}</th>
+      <td>{{x.fname + ' ' + x.lname}}</td>
+      <td>{{x.start}}</td>
+      <td>{{x.end}}</td>
+    </tr>
+  </tbody>
+</table>
