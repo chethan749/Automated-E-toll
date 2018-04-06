@@ -18,6 +18,7 @@ angular.module('Dashboard').controller('dashboardController', ['$http', '$scope'
 angular.module('Dashboard').controller('transactionsController', ['$http', '$scope', function($http, $scope){
   $scope.start_date = '';
   $scope.end_date = '';
+  $scope.isData = false;
   $scope.get_transactions = function(){
     var date = new Date($scope.start_date);
     var start = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString() + '-' + date.getDate().toString() + ' ' + date.getHours().toString() + ':' + date.getMinutes().toString() + ':' + date.getSeconds().toString();
@@ -31,7 +32,11 @@ angular.module('Dashboard').controller('transactionsController', ['$http', '$sco
             end: end}
     }).then(function(data){
         $scope.details = data.data;
-        console.log($scope.details);
+        if($scope.details.length)
+          $scope.isData = true;
+        else {
+          $scope.isData = false;
+        }
     }, function(err){});
   }
 }]);

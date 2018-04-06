@@ -14,9 +14,6 @@ div > a:hover
 .container
 {
   margin: auto;
-}
-form
-{
   padding: 5%;
 }
 #detail-box
@@ -26,8 +23,4 @@ form
 .container.row .col-md-4
 {
   text-align: center;
-}
-#view
-{
-  margin: 5%;
 }

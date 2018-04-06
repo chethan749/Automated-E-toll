@@ -25,7 +25,7 @@ app.use(morgan('dev'));
 
 app.post("/dashboard", function(req, res){
   console.log(req.body.username);
-  connection.query("select * from user WHERE username = ?", [req.body.username], function(err, data){
+  connection.query("select username, dlno from user WHERE username = ?", [req.body.username], function(err, data){
     if(err)
     {
       console.log("Error while querying database :- " + err);
