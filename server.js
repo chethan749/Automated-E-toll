@@ -70,7 +70,8 @@ app.post('/update', function(req, res){
           if(err)
             res.send(err);
           else {
-            console.log('End Location added to reg no' + reg);
+            console.log('End Location added to reg no: ' + reg);
+            res.send('End Location added to reg no: ' + reg);
           }
         });
       }
@@ -79,11 +80,11 @@ app.post('/update', function(req, res){
           if(err)
             res.send(err);
           else {
-            console.log('End Location added to reg no' + reg);
+            console.log('Start Location added to reg no: ' + reg);
+            res.send('Start Location added to reg no: ' + reg);
           }
         });
       }
-      //connection.query('select ')
     }
   })
 })
