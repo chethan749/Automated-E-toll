@@ -19,14 +19,16 @@ angular.module('Dashboard').controller('transactionsController', ['$http', '$sco
   $scope.start_date = '';
   $scope.end_date = '';
   $scope.get_transactions = function(){
-    var start = new Date($scope.start_date);
-    var end = new Date($scope.end_date);
+    var date = new Date($scope.start_date);
+    var start = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString() + '-' + date.getDate().toString() + ' ' + date.getHours().toString() + ':' + date.getMinutes().toString() + ':' + date.getSeconds().toString();
+    date = new Date($scope.end_date);
+    var end = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString() + '-' + date.getDate().toString() + ' ' + date.getHours().toString() + ':' + date.getMinutes().toString() + ':' + date.getSeconds().toString();
     console.log(start, end);
     $http({
       url: '/transactions',
       method: 'post',
-      data: {start: $scope.start_date,
-            end: $scope.end_date}
+      data: {start: start,
+            end: end}
     }).then(function(data){
         $scope.details = data.data;
         console.log($scope.details);
